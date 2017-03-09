@@ -60,14 +60,14 @@ describe('TodoAPI', () => {
       completed: true
     },{
       id: 2,
-      test: 'Some Whatever I want!',
+      text: 'Some Whatever I want!',
       completed: false
     },{
       id: 3,
-      test: 'That thing that must be done',
+      text: 'That thing that must be done',
       completed: true
     }];
-/*
+
     it('should return all items if showCompleted is true', () => {
       var filteredTodos = TodoAPI.filterTodos(todos, true, '');
       expect(filteredTodos.length).toBe(3);
@@ -84,13 +84,13 @@ describe('TodoAPI', () => {
     });
 
     it('should filter todos by searchText', () => {
-      var filteredTodos = TodoAPI.filterTodos(todos, true, 'some');
+      var filteredTodos = TodoAPI.filterTodos(todos, true, 'Some');
       expect(filteredTodos.length).toBe(2);
     });
 
     it('should return all todos when searchText is empty', () => {
       var filteredTodos = TodoAPI.filterTodos(todos, true, '');
       expect(filteredTodos.length).toBe(3);
-    });*/
+    });
   });
 });
