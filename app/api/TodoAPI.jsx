@@ -29,7 +29,7 @@ module.exports = {
     // Fillter by searchText
     filteredTodos = filteredTodos.filter((todo) => {
 
-    var text = todo.text.toLowerCase();
+    todo.text.toString().toLowerCase();
 
     return searchText.length === 0 || todo.text.indexOf(searchText) > -1;
     });
