@@ -2,12 +2,12 @@ import firebase from 'firebase';
 
 try {
   var config = {
-      apiKey: "AIzaSyA7G-ozWxeuBBLqoWSRX8QE0IPHbVzBcp8",
-      authDomain: "zach-todo-app.firebaseapp.com",
-      databaseURL: "https://zach-todo-app.firebaseio.com",
-      projectId: "zach-todo-app",
-      storageBucket: "zach-todo-app.appspot.com",
-      messagingSenderId: "1071787987917"
+      apiKey: process.env.API_KEY,
+      authDomain: process.env.AUTH_DOMAIN,
+      databaseURL: process.env.DATABASE_URL,
+      projectId: process.env.PROJECT_ID,
+      storageBucket: process.env.STORAGE_BUCKET,
+      messagingSenderId: process.env.MESSAGING_SENDER_ID
     };
   firebase.initializeApp(config);
 } catch (e) {
