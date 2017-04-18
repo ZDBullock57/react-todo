@@ -123,7 +123,7 @@ describe('Reducers', () => {
     });
 
     it('should wipe auth on LOGOUT', () => {
-      const auithData = {
+      const authData = {
         uid: '123abc'
       };
       const action = {
