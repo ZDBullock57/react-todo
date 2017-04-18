@@ -48,6 +48,8 @@ export var todosReducer = (state = [], action) => {
       });
       return updatedTodos;
       break;
+    case 'LOGOUT':
+      return [];
     default:
       return state;
   };
