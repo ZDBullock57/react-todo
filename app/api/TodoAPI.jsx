@@ -14,7 +14,7 @@ module.exports = {
 
     todo.text.toString().toLowerCase();
 
-    return searchText.length === 0 || todo.text.indexOf(searchText) > -1;
+    return searchText.length === 0 || todo.text.indexOf(searchText.toLowerCase()) > -1;
     });
 
     // Sort todos with non-completed first

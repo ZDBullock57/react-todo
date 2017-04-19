@@ -99,7 +99,7 @@ export var login = (uid) => {
   };
 };
 
-export var startLogin = () => {
+export var startLoginGitHub = () => {
   return (dispatch, getState) => {
     firebase.auth().signInWithPopup(githubProvider).then((result) => {
       console.log('Auth worked!', result);

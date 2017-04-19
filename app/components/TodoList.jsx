@@ -5,8 +5,34 @@ var TodoAPI = require('TodoAPI');
 //var Todo = require('Todo');
 import Todo from 'Todo';
 
-export var TodoList = React.createClass({
-  render: function () {
+// export var TodoList = React.createClass({
+//   render: function () {
+//     var {todos, showCompleted, searchText} = this.props;
+//
+//     var renderTodos = () => {
+//       var filteredTodos = TodoAPI.filterTodos(todos, showCompleted, searchText);
+//       if(filteredTodos.length === 0) {
+//         return (
+//           <p className="container__message">Nothing to do</p>
+//         );
+//       }
+//       return TodoAPI.filterTodos(todos, showCompleted, searchText).map((todo) => {
+//         return (
+//           <Todo key={todo.id} {...todo}/>
+//         );
+//       });
+//     };
+//
+//     return (
+//       <div>
+//         {renderTodos()}
+//       </div>
+//     )
+//   }
+// });
+
+export class TodoList extends React.Component {
+  render() {
     var {todos, showCompleted, searchText} = this.props;
 
     var renderTodos = () => {
@@ -27,9 +53,9 @@ export var TodoList = React.createClass({
       <div>
         {renderTodos()}
       </div>
-    )
+    );
   }
-});
+}
 
 export default connect(
   (state) => {
