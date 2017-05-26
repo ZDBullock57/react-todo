@@ -14,6 +14,26 @@ export var toggleShowCompleted = (showCompleted) => {
   };
 };
 
+export var deleteTodo = (id) => {
+  return {
+    type: 'DELETE_TODO',
+    id
+  };
+};
+
+export var startDeleteTodo = (id) => {
+  return (dispatch, getState) => {
+    var uid = getState().auth.uid;
+    var todoRef = firebaseRef.child(`users/${uid}/todos/${id}`);
+
+    todoRef.remove().then(() => {
+      dispatch(deleteTodo(id));
+    });
+  };
+
+  return todoRef;
+};
+
 export var addTodo = (todo) => {
   return {
     type: 'ADD_TODO',

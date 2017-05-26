@@ -35,6 +35,20 @@ export var todosReducer = (state = [], action) => {
         ...action.todos
       ];
       break;
+    case 'DELETE_TODO':
+      var updatedTodos = state;
+      var i;
+      for(i = 0; i < updatedTodos.length; i++)
+      {
+        if(updatedTodos[i].id === action.id)
+        {
+          updatedTodos.splice(i, 1);
+        }
+      }
+      return [
+        ...updatedTodos
+      ];
+      break;
     case 'UPDATE_TODO':
       var updatedTodos = state.map((todo) => {
         if(todo.id === action.id) {
